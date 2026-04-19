@@ -836,7 +836,7 @@ footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
   text-align: center;
 }
 .audit-section h2 { color: #fff; }
-.audit-section .section-sub { color: rgba(255,255,255,0.6); margin-left: auto; margin-right: auto; }
+.audit-section .section-sub { color: rgba(255,255,255,0.88); margin-left: auto; margin-right: auto; }
 .audit-inner {
   max-width: 560px;
   margin: 0 auto;
