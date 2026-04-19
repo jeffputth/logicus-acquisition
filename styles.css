@@ -785,23 +785,22 @@ footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
   gap: 14px;
 }
 .personalization-list li {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  position: relative;
   color: rgba(255,255,255,0.65);
   font-size: 15.5px;
   line-height: 1.6;
-  padding: 14px 18px;
+  padding: 14px 18px 14px 40px;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 10px;
 }
 .personalization-list li::before {
   content: "→";
+  position: absolute;
+  left: 18px;
+  top: 14px;
   color: #D04F2B;
   font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 1px;
 }
 .personalization-list li span {
   color: #fff;
