@@ -157,8 +157,14 @@
       font-style: italic;
     }
 
-    @media (max-width: 480px) {
-      .back-link { font-size: 0.78rem; right: 16px; }
+    @media (max-width: 600px) {
+      .nav-inner { justify-content: space-between; padding: 0 16px; }
+      .logo-mark { margin-left: 0 !important; }
+      .back-link {
+        position: static;
+        transform: none;
+        font-size: 0.78rem;
+      }
     }
   </style>
 </head>
