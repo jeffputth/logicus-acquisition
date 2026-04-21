@@ -1213,7 +1213,12 @@
     }
 
     function toggleEmail(btn) {
-      btn.closest('.email-card').classList.toggle('open');
+      const card = btn.closest('.email-card');
+      const wasOpen = card.classList.contains('open');
+      card.classList.toggle('open');
+      if (wasOpen) {
+        document.getElementById('email-showcase').scrollIntoView({ behavior: 'smooth' });
+      }
     }
   </script>
 
