@@ -405,14 +405,27 @@
     }
     .email-type { color: #D04F2B; font-size: 0.88rem; font-weight: 700; }
     .email-num { font-size: 0.88rem; font-weight: 700; }
-    .email-subject strong { color: #fff; font-size: 0.93rem; font-weight: 600; }
-    .email-preview-text strong { color: #fff; }
+    .email-subject,
+    .email-preview-text {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.82);
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .email-subject strong,
+    .email-preview-text strong {
+      color: rgba(255,255,255,0.38);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-right: 4px;
+    }
     .alt-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 4px 24px;
+      flex-direction: column;
+      gap: 6px;
     }
-    .alt-row .email-preview-text { flex-shrink: 0; color: #fff; }
     .email-header { display: flex; flex-direction: column; gap: 7px; cursor: default; }
     .email-subject, .email-preview-text, .alt-row { display: none; }
     .email-card.open .email-subject { display: block; }
