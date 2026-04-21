@@ -1215,17 +1215,15 @@
     function toggleEmail(btn) {
       const card = btn.closest('.email-card');
       const wasOpen = card.classList.contains('open');
-      card.classList.toggle('open');
       if (wasOpen) {
-        const savedY = window.scrollY;
-        let locked = true;
-        const lockScroll = () => { if (locked) window.scrollTo({ top: savedY, behavior: 'instant' }); };
-        window.addEventListener('scroll', lockScroll, { passive: true });
-        setTimeout(() => {
-          locked = false;
-          window.removeEventListener('scroll', lockScroll);
-          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 400);
+        const wrap = card.querySelector('.email-body-wrap');
+        wrap.style.transition = 'none';
+        wrap.style.maxHeight = '0';
+        card.classList.remove('open');
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => { wrap.style.transition = ''; wrap.style.maxHeight = ''; }, 500);
+      } else {
+        card.classList.add('open');
       }
     }
   </script>
