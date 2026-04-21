@@ -1217,7 +1217,7 @@
       const wasOpen = card.classList.contains('open');
       card.classList.toggle('open');
       if (wasOpen) {
-        document.getElementById('email-showcase').scrollIntoView({ behavior: 'smooth' });
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   </script>
