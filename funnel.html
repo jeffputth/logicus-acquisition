@@ -420,6 +420,24 @@
     .email-card.open .email-preview-text { display: block; }
     .email-card.open .alt-row { display: flex; }
     .email-note { text-align: center; font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 40px; font-style: italic; }
+
+    /* ── Personalization glow ── */
+    .personalization-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .personalization-section::before {
+      content: '';
+      position: absolute;
+      top: 54%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(600px, 100vw);
+      height: 320px;
+      background: radial-gradient(ellipse at center, rgba(208,79,43,0.18) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .personalization-section .container { position: relative; z-index: 1; }
   </style>
 </head>
 <body>
@@ -645,7 +663,7 @@
   <section class="email-previews" id="email-showcase">
     <div class="container">
       <h2 style="text-align:center;">Inside the Sequence</h2>
-      <p class="section-sub" style="text-align:center; margin-left:auto; margin-right:auto;">The full 4-email sequence for <strong>Segment 2 - dads with kids aged 5–12.</strong> Every word, unchanged from real emails we wrote for one of our clients.</p>
+      <p class="section-sub" style="text-align:center; margin-left:auto; margin-right:auto; text-wrap:pretty;">The full 4-email sequence for <strong>Segment 2 — dads with kids aged 5–12.</strong></p>
       <h3 style="margin-top: 40px; font-size: 1.25rem; font-weight: 700; color: #fff; text-align: left;"><span style="text-decoration:underline; text-decoration-color:#fff;">The Full Email Sequence</span></h3>
 
       <p class="email-note" style="margin-top:16px; margin-bottom:24px; font-size:0.72rem; max-width:420px; margin-left:0; margin-right:auto; text-align:left;"><strong style="color:#fff;">Note:</strong> The name "Alex" used in the emails below is a placeholder — your email platform fills in each subscriber's real name automatically via merge tags.</p>
@@ -908,7 +926,7 @@
   <section class="personalization-section">
     <div class="container">
       <div class="personalization-inner">
-        <h2 style="text-align: center; text-wrap: balance;">"What if my offer only targets one type of audience?"</h2>
+        <h2 style="text-align: center; text-wrap: balance; font-style: italic;">"What if my offer only targets one type of audience?"</h2>
         <p class="section-sub">Most funnels don't fail because they lack segmentation.<br>They fail because they lack any layer of personalization beyond a first name.</p>
         <p class="personalization-body">Even if your offer targets one specific niche, there's still a lot we can do:</p>
         <ul class="personalization-list">
