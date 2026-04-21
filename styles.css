@@ -401,7 +401,7 @@ h2 {
   border-radius: 100px;
   white-space: nowrap;
 }
-.email-type { font-size: 0.78rem; font-weight: 500; color: var(--gray); }
+.email-type { font-size: 0.78rem; font-weight: 500; color: #fff; }
 
 .email-subject { font-size: 0.93rem; font-weight: 600; color: #fff; grid-column: 1; }
 .email-subject strong { font-weight: 400; color: var(--gray); font-size: 0.8rem; margin-right: 4px; }
