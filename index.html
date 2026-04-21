@@ -1217,11 +1217,15 @@
       const wasOpen = card.classList.contains('open');
       if (wasOpen) {
         const wrap = card.querySelector('.email-body-wrap');
+        const savedY = window.scrollY;
         wrap.style.transition = 'none';
         wrap.style.maxHeight = '0';
         card.classList.remove('open');
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(() => { wrap.style.transition = ''; wrap.style.maxHeight = ''; }, 500);
+        window.scrollTo({ top: savedY, behavior: 'instant' });
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }));
+        setTimeout(() => { wrap.style.transition = ''; wrap.style.maxHeight = ''; }, 600);
       } else {
         card.classList.add('open');
       }
