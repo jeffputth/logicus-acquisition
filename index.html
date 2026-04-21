@@ -1217,7 +1217,9 @@
       const wasOpen = card.classList.contains('open');
       card.classList.toggle('open');
       if (wasOpen) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 400);
       }
     }
   </script>
